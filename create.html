@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Builder</h1>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="ai-suggestion">Enter your full name</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jobTitle">Job Title:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="jobTitle" name="jobTitle" list="jobTitles" required>
+                    <datalist id="jobTitles">
+                        <option value="Software Engineer">
+                        <option value="Data Scientist">
+                        <option value="Product Manager">
+                        <option value="Graphic Designer">
+                        <option value="Project Manager">
+                        <option value="Business Analyst">
+                    </datalist>
+                    <div class="ai-suggestion">Select your job title</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <div class="input-wrapper">
+                    <input type="number" id="experience" name="experience" min="0" required>
+                    <div class="ai-suggestion">Enter your years of experience</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="skills" name="skills" list="skillSuggestions" required>
+                    <datalist id="skillSuggestions">
+                        <option value="JavaScript">
+                        <option value="Python">
+                        <option value="Project Management">
+                        <option value="Data Analysis">
+                        <option value="Machine Learning">
+                        <option value="UX Design">
+                        <option value="HTML/CSS">
+                        <option value="SQL">
+                        <option value="Marketing Strategies">
+                        <option value="Team Leadership">
+                        <option value="Graphic Design">
+                    </datalist>
+                    <div class="ai-suggestion">List your key skills</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="education" name="education" required>
+                    <div class="ai-suggestion">Enter your highest degree</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="address" name="address" required>
+                    <div class="ai-suggestion">Enter your address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="experienceDetails">Work Experience:</label>
+                <textarea id="experienceDetails" name="experienceDetails" rows="4" required></textarea>
+                <button type="button" onclick="generateExperience()">Generate Experience</button>
+            </div>            
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <div class="ai-suggestion">Enter your phone number</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="linkedIn">LinkedIn Profile:</label>
+                <div class="input-wrapper">
+                    <input type="url" id="linkedIn" name="linkedIn" required>
+                    <div class="ai-suggestion">Enter your LinkedIn profile URL</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="certifications" name="certifications" required>
+                    <div class="ai-suggestion">Enter your certifications</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="summary">Profile Summary:</label>
+                <textarea id="summary" name="summary" rows="4" readonly></textarea>
+                <button type="button" onclick="generateProfileSummary()">Generate Summary</button>
+            </div>
+            <button type="submit">Create Resume</button>
+        </form>
+        <div id="resume-output" class="resume-output"></div>
+
+        <!-- Wolf Character -->
+        <div class="wolf-container">
+            <div class="wolf"></div>
+            <div class="wolf-speech-bubble">I can help you with your resume!</div>
+        </div>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>

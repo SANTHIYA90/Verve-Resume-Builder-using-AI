@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Resume Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1 contenteditable="true" id="outputFullName">John Doe</h1>
+            <p class="contact-info">
+                Phone: <span contenteditable="true" id="outputPhoneNumber">(123) 456-7890</span> | Email: <span contenteditable="true" id="outputEmail">johndoe@example.com</span> | LinkedIn: <span contenteditable="true" id="outputLinkedIn">linkedin.com/in/johndoe</span>
+            </p>
+            <p class="address" contenteditable="true" id="outputAddress">123 Main Street, City, Country</p>
+        </div>
+
+        <div class="section">
+            <h2>Summary</h2>
+            <p contenteditable="true" id="outputSummary">
+                Highly motivated and results-oriented professional with over 5 years of experience in the tech industry. 
+                Skilled in software development, project management, and team leadership.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <p contenteditable="true" id="outputExperience">
+                Senior Software Engineer at Tech Company Inc. | Jan 2020 - Present
+                <ul>
+                    <li>Lead a team of 10 developers in creating scalable web applications.</li>
+                    <li>Optimized system performance, reducing load times by 30%.</li>
+                    <li>Collaborated with cross-functional teams to define project requirements and timelines.</li>
+                </ul>
+                Software Engineer at Innovatech Solutions | Jan 2017 - Dec 2019
+                <ul>
+                    <li>Developed and maintained features for a customer relationship management (CRM) platform.</li>
+                    <li>Improved codebase quality through peer code reviews and refactoring.</li>
+                    <li>Provided technical support and guidance to junior team members.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <p contenteditable="true" id="outputEducation">
+                Bachelor of Science in Computer Science, University of Technology, 2016
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul class="skills" contenteditable="true" id="outputSkills">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Project Management</li>
+                <li>Agile Methodologies</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <p contenteditable="true" id="outputCertifications">Certified Scrum Master (CSM), 2020</p>
+        </div>
+
+        <button onclick="downloadResume()">Download Resume</button>
+    </div>
+
+    <script src="output.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+</body>
+</html>

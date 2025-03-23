@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff;
+    overflow: hidden; /* Prevents scrollbar during animation */
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: #f57f20; /* Orange color */
+    font-family: 'Bebas Neue', sans-serif; /* Netflix-like font */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f57f20; /* Orange color for heading */
+}
+
+.guiding-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.templates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.template {
+    width: 200px;
+    height: 300px;
+    background-color: #222; /* Dark background for templates */
+    border: 2px solid #f57f20; /* Orange border */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f57f20; /* Orange text */
+    font-size: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.template:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #f57f20; /* Glow effect on hover */
+}

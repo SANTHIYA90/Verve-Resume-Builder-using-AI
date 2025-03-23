@@ -1,0 +1,106 @@
+:root {
+    /* Color Variables */
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #f1f1f1;
+    --background-color: #ffffff;
+    --header-border-color: #eaeaea;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Font Variables */
+    --font-family: Arial, sans-serif;
+    --font-size-header: 32px;
+    --font-size-section-title: 20px;
+    --font-size-body: 14px;
+    --font-size-small: 12px;
+
+    /* Layout Variables */
+    --max-width: 900px;
+    --margin: 40px auto;
+    --padding: 20px;
+    --section-margin: 20px 0;
+    --section-padding: 5px 0;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    width: 80%;
+    max-width: var(--max-width);
+    margin: var(--margin);
+    padding: var(--padding);
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--padding);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: var(--font-size-header);
+    color: var(--primary-color);
+}
+
+.contact-info {
+    margin: 10px 0 0 0;
+    font-size: var(--font-size-body);
+    color: var(--secondary-color);
+}
+
+.section {
+    margin: var(--section-margin);
+}
+
+.section h2 {
+    font-size: var(--font-size-section-title);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--header-border-color);
+    padding-bottom: var(--section-padding);
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 15px;
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.experience-item .company {
+    font-size: var(--font-size-small);
+    color: var(--secondary-color);
+}
+
+.experience-item ul {
+    margin: 10px 0 0 20px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.skills {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: var(--font-size-body);
+    color: var(--primary-color);
+}

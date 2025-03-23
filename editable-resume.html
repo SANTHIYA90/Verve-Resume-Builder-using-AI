@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="editable-resume.css">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1 contenteditable="true" id="name"></h1>
+            <p id="contact-info">
+                <span contenteditable="true" id="contact"></span> | <a href="#" contenteditable="true" id="email"></a>
+            </p>
+        </header>
+
+        <section id="career-objective">
+            <h2>Career Objective</h2>
+            <p contenteditable="true" id="careerObjective"></p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul id="educationList">
+                <!-- Education entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul id="achievementsList">
+                <!-- Achievements entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="internships">
+            <h2>Internships</h2>
+            <ul id="internshipsList">
+                <!-- Internships entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul id="projectsList">
+                <!-- Projects entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="technical-expertise">
+            <h2>Technical Expertise</h2>
+            <ul id="skillsList">
+                <!-- Skills entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul id="certificationsList">
+                <!-- Certifications entries will be injected here -->
+            </ul>
+        </section>
+
+        <section id="links">
+            <h2>Links</h2>
+            <ul id="linksList">
+                <!-- Links entries will be injected here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="editable-resume.js"></script>
+</body>
+</html>

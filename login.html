@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Verve</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="image-section"></div>
+        <div class="login-section">
+            <header>
+                <a href="#" class="logo-text">Verve</a>
+            </header>
+            <div class="login-box">
+                <h1>Sign In</h1>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+                <p class="forgot-password"><a href="#">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            // Logic for handling login can be added here
+            window.location.href = "create.html"; // Redirect to create.html after login
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #161b22, #0f141a);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #58a6ff;
+    animation: fadeIn 1s ease-in-out;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: block;
+    color: #8b949e;
+    transition: color 0.3s;
+}
+
+.input-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+    outline: none;
+}
+
+/* AI Suggestion Feature */
+.ai-suggestion {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: #21262d;
+    color: #c9d1d9;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.input-wrapper:hover .ai-suggestion {
+    display: block;
+}
+
+/* Hint and Progress Indicator */
+.hint-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8b949e;
+    opacity: 0.8;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 0;
+    background-color: #58a6ff;
+    border-radius: 8px;
+    transition: width 0.5s ease;
+    margin-top: 8px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2ea043;
+    box-shadow: 0 4px 12px rgba(34, 139, 34, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #238636;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Keyframes for Smooth Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+.wolf-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.wolf {
+    width: 100%;
+    height: 120px;
+    background-image: url('wolf.png'); /* Replace with a wolf image */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wolf-speech-bubble {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: -80px;
+    background-color: #21262d;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.wolf-container:hover .wolf-speech-bubble {
+    display: block;
+}

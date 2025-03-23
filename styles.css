@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #000000;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo-text {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F57f20;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.welcome-title {
+    font-size: 4em;
+    margin: 0;
+    color: #000000;
+    line-height: 1.2;
+    animation: textRandomAnimation 5s infinite;
+    background: linear-gradient(90deg, #f57f20, #f00, #000000);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-description {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #000000;
+    animation: fadeIn 3s ease-in;
+}
+
+.get-started-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #FF4C4C;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.get-started-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.button-text {
+    margin-right: 10px;
+}
+
+.arrow {
+    font-size: 1.5em;
+    transition: transform 0.3s;
+}
+
+.get-started-button:hover .arrow {
+    transform: translateX(5px);
+}
+
+@keyframes textRandomAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

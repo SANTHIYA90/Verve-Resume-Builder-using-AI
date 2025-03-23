@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Verve</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #191919; /* Same background color as ChatGPT */
+            font-family: 'SF Pro Display', Arial, sans-serif; /* Apple's San Francisco font */
+        }
+
+        .welcome-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .fade-text {
+            font-size: 2.5rem;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 2s ease-in-out;
+            background: linear-gradient(90deg, #ff5733, #df4c2d, #bf4126, #9f3620);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 6s linear infinite;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0%; }
+            100% { background-position: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text">Verve</div>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <div class="fade-text" id="text1">Welcome to Verve</div>
+            <div class="fade-text" id="text2">Create beautiful Resumes using our AI</div>
+            <div class="fade-text" id="text3">Unleash your potential</div>
+            <div class="fade-text" id="text4">Tailored to your needs</div>
+            <div class="fade-text" id="text5">Elevate your career</div>
+            <div class="fade-text" id="text6">Start your journey today</div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">© 2024 Verve</p>
+    </footer>
+
+    <script>
+        const texts = [
+            document.getElementById('text1'),
+            document.getElementById('text2'),
+            document.getElementById('text3'),
+            document.getElementById('text4'),
+            document.getElementById('text5'),
+            document.getElementById('text6')
+        ];
+
+        let currentIndex = 0;
+
+        function showNextText() {
+            // Hide current text
+            texts[currentIndex].classList.remove('fade-in');
+
+            // Move to next text if it's not the last one
+            if (currentIndex < texts.length - 1) {
+                currentIndex++;
+                texts[currentIndex].classList.add('fade-in');
+            } else {
+                clearInterval(textInterval); // Stop the interval once the last text is shown
+            }
+        }
+
+        // Initial fade in
+        texts[currentIndex].classList.add('fade-in');
+
+        // Change text every 2.5 seconds
+        const textInterval = setInterval(showNextText, 2500);
+    </script>
+</body>
+</html>

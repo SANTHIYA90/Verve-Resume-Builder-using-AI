@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview</title>
+    <link rel="stylesheet" href="customize.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resume Preview</h1>
+        </header>
+        <main>
+            <div id="resumeContent"></div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resumeData = JSON.parse(sessionStorage.getItem('resumeData'));
+
+            const resumeContent = `
+                <h2>${resumeData.name}</h2>
+                <p>${resumeData.phone} | ${resumeData.email} | ${resumeData.linkedin} | ${resumeData.city}</p>
+                <h3>Profile Summary</h3>
+                <p>${resumeData.summary}</p>
+                <h3>Education</h3>
+                <p>${resumeData.degree}, ${resumeData.university}, ${resumeData.eduLocation} - ${resumeData.gradDate}</p>
+                <p>HSC Marks: ${resumeData.hscMarks}, HSC Percentage: ${resumeData.hscPercentage}</p>
+                <p>SSLC Marks: ${resumeData.sslcMarks}, SSLC Percentage: ${resumeData.sslcPercentage}</p>
+                <p>Year of Study in HSC: ${resumeData.hscYear}, Year of Study in SSLC: ${resumeData.sslcYear}</p>
+                <h3>Experience</h3>
+                ${resumeData.experiences}
+                <h3>Skills</h3>
+                <p>${resumeData.skills}</p>
+                <h3>Certifications</h3>
+                <p>${resumeData.certifications}</p>
+                <h3>Projects</h3>
+                <p>${resumeData.projects}</p>
+            `;
+
+            document.getElementById('resumeContent').innerHTML = resumeContent;
+        });
+    </script>
+</body>
+</html>
